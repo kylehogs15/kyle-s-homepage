@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homepage</title>
+    <style>
+        :root {
+            color-scheme: dark;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            overflow: hidden;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #ffffff;
+            background: #834600;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+
+        body::before,
+        body::after {
+            content: "";
+            position: fixed;
+            inset: -20%;
+            pointer-events: none;
+            z-index: 0;
+            background:
+                radial-gradient(circle, rgb(255, 255, 255) 0 12%, transparent 13%),
+                radial-gradient(circle, rgb(165, 108, 1) 0 12%, transparent 13%),
+                radial-gradient(circle, rgb(255, 255, 255) 0 12%, transparent 13%),
+                radial-gradient(circle, rgb(158, 103, 0) 0 12%, transparent 13%),
+                radial-gradient(circle, rgb(255, 255, 255) 0 12%, transparent 13%);
+            background-size: 28% 28%, 36% 36%, 32% 32%, 30% 30%, 24% 24%;
+            background-position: 20% 20%, 80% 10%, 70% 80%, 20% 70%, 50% 50%;
+            animation: ripple 6s ease-in-out infinite;
+            filter: blur(10px);
+        }
+
+        body::after {
+            animation-duration: 14s;
+            animation-direction: reverse;
+            opacity: 0.85;
+        }
+
+        @keyframes ripple {
+            0% {
+                transform: scale(0.95) translate(0, 0);
+                opacity: 0.65;
+            }
+            50% {
+                transform: scale(1.15) translate(20px, -12px);
+                opacity: 0.95;
+            }
+            100% {
+                transform: scale(1.4) translate(-24px, 18px);
+                opacity: 0.7;
+            }
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            max-width: 620px;
+            text-align: center;
+            padding: 24px;
+            border-radius: 20px;
+            background: rgba(8, 12, 26, 0.35);
+            backdrop-filter: blur(8px);
+            box-shadow: 0 18px 50px rgba(0, 0, 0, 0.25);
+        }
+
+        .content p {
+            margin: 0;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        .effects-link {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 2;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: 700;
+            letter-spacing: 1px;
+            border: 2px solid rgba(255, 255, 255, 0.7);
+            background: linear-gradient(135deg, #794000, #945901, #ffffff, #ffffff);
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.3);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .effects-link:hover,
+        .effects-link:focus-visible {
+            transform: scale(1.05);
+            box-shadow: 0 14px 34px rgba(0, 0, 0, 0.35);
+        }
+
+        @media (max-width: 600px) {
+            .effects-link {
+                width: 96px;
+                height: 96px;
+                top: 14px;
+                left: 14px;
+                font-size: 0.95rem;
+            }
+
+            .content {
+                padding: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a class="effects-link" href="https://mega.nz/folder/OC421YqZ#lfKvcxz8B-N54qhowg2UPg" target="_blank" rel="noopener noreferrer">EFFECTS</a>
+
+    <div class="content">
+        <p>This is a homepage where you can click any button that will take you to another page or anything else you need. Have fun.</p>
+    </div>
+</body>
+</html>
